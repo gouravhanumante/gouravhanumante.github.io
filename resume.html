@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Gourav Hanumante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 48px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid #6366f1;
+        }
+        
+        h1 {
+            font-family: 'Bricolage Grotesque', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        
+        .title {
+            font-size: 1.1rem;
+            color: #6366f1;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        
+        .contact-info a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            border-left: 4px solid #6366f1;
+        }
+        
+        .summary p {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+        
+        .summary strong {
+            color: #0f172a;
+        }
+        
+        section {
+            margin-bottom: 28px;
+        }
+        
+        h2 {
+            font-family: 'Bricolage Grotesque', Georgia, serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #6366f1;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e2e8f0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .company {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+        
+        .date {
+            font-size: 0.85rem;
+            color: #6366f1;
+            font-weight: 500;
+        }
+        
+        .project-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #8b5cf6;
+            margin: 16px 0 8px;
+        }
+        
+        ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .skill-category h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .skill-tag {
+            padding: 4px 10px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #475569;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        
+        .cert-item::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            color: #6366f1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            .print-btn, .back-link {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .resume-container {
+                padding: 24px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    
+    <div class="resume-container">
+        <header class="header">
+            <h1>Gourav Hanumante</h1>
+            <p class="title">Android Developer & Kotlin Multiplatform Engineer</p>
+            <div class="contact-info">
+                <span>📍 Bengaluru, India</span>
+                <span>📞 +91 8770435014</span>
+                <a href="mailto:gouravhanumante.work@gmail.com">✉️ gouravhanumante.work@gmail.com</a>
+                <a href="https://www.linkedin.com/in/gouravhanumante/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/gouravhanumante" target="_blank">GitHub</a>
+            </div>
+        </header>
+        
+        <div class="summary">
+            <p>
+                Android-first engineer with <strong>2.7+ years</strong> of experience building and scaling consumer apps used by 
+                <strong>3M+ users</strong> across 7 Asian markets. Strong expertise in Kotlin, Coroutines, Jetpack Compose, and 
+                Kotlin Multiplatform, with hands-on ownership of large-scale migrations, performance optimization, and 
+                cross-platform architecture. Known for reducing release cycles, improving stability, and shipping resilient 
+                systems in production.
+            </p>
+        </div>
+        
+        <section>
+            <h2>Work Experience</h2>
+            
+            <div class="job-header">
+                <div>
+                    <h3>Software Development Engineer I</h3>
+                    <p class="company">Capillary Technologies — Bengaluru, India</p>
+                </div>
+                <span class="date">July 2023 – Present</span>
+            </div>
+            
+            <p class="project-title">Shell Asia App | Kotlin Multiplatform Platform Migration</p>
+            <ul>
+                <li>Migrated a 500K+ LOC legacy Android codebase to Kotlin Multiplatform, applying Clean Architecture to shared modules and enabling 80% shared business logic across Android and iOS and reducing feature delivery time by 60%.</li>
+                <li>Designed and built shared KMP modules for Authentication, OTP, Profile, Dashboard, Loyalty, and Payments, consumed by Android (Jetpack Compose) and iOS (SwiftUI).</li>
+                <li>Implemented 14+ Server-Driven UI (SDUI) components, allowing real-time UI updates without app releases and reducing deployment effort by 70%.</li>
+                <li>Used expect/actual abstractions for platform-specific features (biometrics, secure storage, real-time messaging), with Koin-based scoped dependency injection across shared KMP modules.</li>
+                <li>Optimized networking via a Backend-for-Frontend (BFF) layer, reducing API calls by 70% and achieving &lt;500ms combined response times.</li>
+                <li>Improved reliability with ~90% test coverage, interface-driven design, structured error handling, and KMP-native logging using Kermit.</li>
+            </ul>
+            
+            <p class="project-title">Shell Asia App | Android Application Development</p>
+            <ul>
+                <li>Built and maintained a multi-region loyalty and payments Android app using Kotlin, Jetpack Compose, and MVVM, achieving 99% crash-free sessions across 6+ markets.</li>
+                <li>Migrated key XML-based screens to Jetpack Compose, improving UI development speed by 35% and reducing legacy UI defects.</li>
+                <li>Implemented B2C (Retail) and B2B (Fleet) payment flows, OTA payment confirmation, biometric login, and encrypted local storage.</li>
+                <li>Added VOC surveys, gamification badges, deep links, and a centralized OTA error engine, reducing debugging time by 30%.</li>
+                <li>Integrated Firebase Analytics, Crashlytics, Messaging, and Performance Monitoring, increasing engagement by 15% and accelerating issue resolution.</li>
+                <li>Introduced Hilt for dependency injection and Room for offline caching, improving reliability in low-network regions.</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Android</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Jetpack Compose</span>
+                        <span class="skill-tag">XML</span>
+                        <span class="skill-tag">MVVM</span>
+                        <span class="skill-tag">Room</span>
+                        <span class="skill-tag">Retrofit</span>
+                        <span class="skill-tag">WorkManager</span>
+                        <span class="skill-tag">Coroutines</span>
+                        <span class="skill-tag">Hilt</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>KMP / iOS</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kotlin Multiplatform</span>
+                        <span class="skill-tag">Ktor</span>
+                        <span class="skill-tag">expect/actual</span>
+                        <span class="skill-tag">SwiftUI</span>
+                        <span class="skill-tag">Combine</span>
+                        <span class="skill-tag">KMP-NativeCoroutines</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Architecture</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Clean Architecture</span>
+                        <span class="skill-tag">Modularization</span>
+                        <span class="skill-tag">Server-Driven UI</span>
+                        <span class="skill-tag">Backend-for-Frontend</span>
+                        <span class="skill-tag">DI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">Xcode</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitLab CI/CD</span>
+                        <span class="skill-tag">Crashlytics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Certifications & Achievements</h2>
+            <div class="cert-item">Capillary AI Challenge - Slack Bot Development (2025)</div>
+            <div class="cert-item">Certification from Persistent Martian Internship Program (2023)</div>
+            <div class="cert-item">Solved 300+ coding problems across LeetCode, GeeksForGeeks, and CodeChef</div>
+        </section>
+    </div>
+    
+    <button class="print-btn" onclick="window.print()">
+        📄 Download / Print PDF
+    </button>
+</body>
+</html>
