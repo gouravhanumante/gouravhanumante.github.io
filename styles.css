@@ -390,7 +390,7 @@ body::before {
 
 .hero-visual {
     position: relative;
-    height: 500px;
+    height: 520px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -421,8 +421,8 @@ body::before {
 
 .solar-system {
     position: relative;
-    width: 340px;
-    height: 340px;
+    width: 460px;
+    height: 460px;
 }
 
 .sun {
@@ -472,11 +472,28 @@ body::before {
 }
 
 .orbit-3 {
-    width: 320px;
-    height: 320px;
-    margin-top: -160px;
-    margin-left: -160px;
-    animation-duration: 20s;
+    width: 280px;
+    height: 280px;
+    margin-top: -140px;
+    margin-left: -140px;
+    animation-duration: 18s;
+}
+
+.orbit-4 {
+    width: 360px;
+    height: 360px;
+    margin-top: -180px;
+    margin-left: -180px;
+    animation-duration: 24s;
+    animation-direction: reverse;
+}
+
+.orbit-5 {
+    width: 440px;
+    height: 440px;
+    margin-top: -220px;
+    margin-left: -220px;
+    animation-duration: 30s;
 }
 
 @keyframes orbit {
@@ -514,7 +531,15 @@ body::before {
 }
 
 .orbit-3 .planet {
-    animation: counterOrbit 20s linear infinite;
+    animation: counterOrbit 18s linear infinite;
+}
+
+.orbit-4 .planet {
+    animation: counterOrbit 24s linear infinite reverse;
+}
+
+.orbit-5 .planet {
+    animation: counterOrbit 30s linear infinite;
 }
 
 @keyframes counterOrbit {
