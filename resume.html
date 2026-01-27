@@ -236,19 +236,29 @@
             text-decoration: underline;
         }
         
+        @page {
+            margin: 0.5in;
+            size: A4;
+        }
+        
         @media print {
-            body {
+            html, body {
                 background: white;
                 padding: 0;
+                margin: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
             
             .resume-container {
                 box-shadow: none;
                 padding: 0;
+                margin: 0;
+                border-radius: 0;
             }
             
             .print-btn, .back-link {
-                display: none;
+                display: none !important;
             }
         }
         
