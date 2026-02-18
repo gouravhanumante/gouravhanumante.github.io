@@ -6,121 +6,111 @@
     <title>Gourav Hanumante - Android Developer Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Plus Jakarta Sans', Arial, sans-serif;
-            background: #f8fafc;
-            color: #0f172a;
-            line-height: 1.5;
+            font-family: 'Inter', Arial, sans-serif;
+            background: #f5f5f5;
+            color: #000;
+            line-height: 1.3;
             padding: 20px;
-            font-size: 11pt;
+            font-size: 10pt;
         }
         .resume-container {
             max-width: 800px;
             margin: 0 auto;
             background: #fff;
-            padding: 48px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            border-radius: 12px;
+            padding: 32px 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .header { 
             text-align: center; 
-            margin-bottom: 24px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #6366f1;
+            margin-bottom: 12px;
         }
         h1 { 
-            font-family: 'Bricolage Grotesque', Georgia, serif;
-            font-size: 28pt; 
-            font-weight: 600; 
-            margin-bottom: 6px;
-            color: #0f172a;
+            font-size: 18pt; 
+            font-weight: 700; 
+            margin-bottom: 2px;
         }
-        .title { 
-            font-size: 13pt; 
-            color: #6366f1; 
-            font-weight: 500;
-            margin-bottom: 12px; 
+        .subtitle {
+            font-size: 10pt;
+            color: #333;
+            margin-bottom: 4px;
         }
-        .contact-line { font-size: 10pt; color: #475569; margin-bottom: 4px; }
-        .contact-line a { color: #6366f1; text-decoration: none; }
-        .contact-line a:hover { text-decoration: underline; }
+        .contact-line { 
+            font-size: 9.5pt; 
+            color: #000; 
+        }
+        .contact-line a { 
+            color: #000; 
+            text-decoration: underline; 
+        }
         
-        .summary { 
-            margin-bottom: 24px;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(139, 92, 246, 0.06) 100%);
-            border-left: 4px solid #6366f1;
-            border-radius: 0 8px 8px 0;
-        }
-        .summary p { font-size: 10.5pt; color: #475569; }
-        .summary strong { color: #0f172a; }
-        
-        section { margin-bottom: 24px; }
+        section { margin-bottom: 12px; }
         h2 {
-            font-family: 'Bricolage Grotesque', Georgia, serif;
-            font-size: 13pt;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #6366f1;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 6px;
-            margin-bottom: 14px;
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #000;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 6px;
         }
-        .job-line { margin-bottom: 4px; }
-        .job-title { font-weight: 600; font-size: 11.5pt; color: #0f172a; }
-        .company { font-size: 10.5pt; color: #475569; }
-        .date { font-size: 10pt; color: #6366f1; font-weight: 500; }
-        .project-name { 
+        
+        .summary p { 
+            font-size: 9.5pt; 
+            color: #000;
+        }
+        
+        .job-title { 
             font-weight: 600; 
-            font-style: italic; 
-            margin: 14px 0 8px 0; 
-            font-size: 11pt;
-            color: #8b5cf6;
+            font-size: 10pt;
+            margin-bottom: 4px;
         }
-        ul { margin-left: 18px; margin-bottom: 10px; }
+        
+        .project-name {
+            font-weight: 600;
+            font-style: italic;
+            font-size: 10pt;
+            margin: 8px 0 4px 0;
+        }
+        
+        ul { 
+            margin-left: 16px; 
+            margin-bottom: 4px; 
+        }
         li { 
-            margin-bottom: 6px; 
-            font-size: 10.5pt; 
-            color: #475569;
+            margin-bottom: 3px; 
+            font-size: 9.5pt; 
+            color: #000;
         }
-        li strong { color: #0f172a; }
         
-        .skills-section p { 
-            margin-bottom: 6px; 
-            font-size: 10.5pt; 
-            color: #475569;
+        .skills-line {
+            font-size: 9.5pt;
+            margin-bottom: 2px;
         }
-        .skills-section strong { color: #0f172a; }
         
-        .edu-item { margin-bottom: 6px; font-size: 10.5pt; color: #475569; }
-        .edu-item strong { color: #0f172a; }
+        .edu-item { 
+            font-size: 9.5pt; 
+        }
         
         .print-btn {
             position: fixed; 
             bottom: 24px; 
             right: 24px;
             padding: 12px 24px; 
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: #333;
             color: white;
             border: none; 
-            border-radius: 8px;
+            border-radius: 4px;
             cursor: pointer;
             font-weight: 500;
-            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
-            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .print-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
-        }
+        .print-btn:hover { background: #555; }
         .back-link { 
             display: inline-block; 
-            margin-bottom: 20px; 
-            color: #6366f1; 
+            margin-bottom: 16px; 
+            color: #0066cc; 
             text-decoration: none;
             font-size: 10pt;
         }
@@ -128,17 +118,9 @@
         
         @page { margin: 0.4in; }
         @media print {
-            body { background: white; padding: 0; font-size: 10pt; }
-            .resume-container { box-shadow: none; padding: 0; border-radius: 0; }
+            body { background: white; padding: 0; }
+            .resume-container { box-shadow: none; padding: 0; }
             .print-btn, .back-link { display: none !important; }
-            h1 { font-size: 20pt; }
-            h2 { font-size: 11pt; color: #333; }
-            .title { color: #555; }
-            .header { border-bottom-color: #333; }
-            .summary { background: #f5f5f5; border-left-color: #333; }
-            li, p, .skills-section p { font-size: 9.5pt; color: #333; }
-            .job-title, .project-name, strong { color: #000; }
-            .date { color: #555; }
         }
     </style>
 </head>
@@ -147,73 +129,64 @@
     
     <div class="resume-container">
         <header class="header">
-            <h1>GOURAV HANUMANTE</h1>
-            <p class="title">Android Developer | Kotlin Multiplatform Engineer</p>
-            <p class="contact-line">
-                Bengaluru, India | +91 8770435014 | <a href="mailto:gouravhanumante.work@gmail.com">gouravhanumante.work@gmail.com</a>
-            </p>
-            <p class="contact-line">
-                <a href="https://www.linkedin.com/in/gouravhanumante/">linkedin.com/in/gouravhanumante</a> | <a href="https://github.com/gouravhanumante">github.com/gouravhanumante</a>
-            </p>
+            <h1>Gourav Hanumante</h1>
+            <p class="subtitle">Android Developer | Kotlin Multiplatform Engineer</p>
+            <p class="contact-line">Bengaluru, India | gouravhanumante.work@gmail.com | +91 8770435014</p>
+            <p class="contact-line"><a href="https://www.linkedin.com/in/gouravhanumante/">LinkedIn</a> | <a href="https://github.com/gouravhanumante">Github</a></p>
         </header>
         
         <section class="summary">
-            <h2>SUMMARY</h2>
+            <h2>Summary</h2>
             <p>
-                <strong>Android Developer</strong> with <strong>2.7+ years</strong> of experience building high-performance mobile applications serving <strong>3M+ users</strong> across <strong>7 international markets</strong>. Expert in <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>Kotlin Multiplatform (KMP)</strong>, and <strong>MVVM architecture</strong>. Achieved <strong>99% crash-free sessions</strong>, reduced feature delivery time by <strong>60%</strong>, and increased user engagement by <strong>15%</strong>. Currently exploring <strong>AI/ML integration</strong> in mobile applications, including building an AI-powered Slack Bot (Capillary AI Challenge Winner 2025).
+                Software Engineer with <strong>2.7+ years</strong> of experience building high-performance mobile applications serving <strong>3M+ users</strong> across <strong>7 international markets</strong>. Specializes in <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>Kotlin Multiplatform (KMP)</strong>, and <strong>MVVM architecture</strong>. Experienced in owning end-to-end features from design to production, achieving <strong>99% crash-free sessions</strong> and reducing feature delivery time by <strong>60%</strong>. Designed modular <strong>Clean Architecture</strong> with Repository + BFF patterns for scalable feature delivery.
             </p>
         </section>
         
         <section>
-            <h2>WORK EXPERIENCE</h2>
+            <h2>Professional Experience</h2>
             
-            <p class="job-line"><span class="job-title">Software Development Engineer I - Android & Kotlin Multiplatform</span></p>
-            <p class="job-line"><span class="company">Capillary Technologies</span> | <span class="date">Bengaluru, India | July 2023 - Present</span></p>
+            <p class="job-title">Software Development Engineer I – Capillary Technologies – Bengaluru, India | July 2023 – Present</p>
             
-            <p class="project-name">Shell Asia App - Kotlin Multiplatform Migration</p>
             <ul>
-                <li>Spearheaded migration of <strong>500,000+ lines of code</strong> from legacy Android to Kotlin Multiplatform, achieving <strong>80% code reusability</strong> across Android and iOS platforms</li>
-                <li>Architected <strong>6 cross-platform KMP modules</strong> (Authentication, Profile, Dashboard, Loyalty, Payments, OTP) reducing feature delivery time by <strong>60%</strong></li>
-                <li>Engineered <strong>14+ Server-Driven UI components</strong> enabling real-time UI updates without app releases, cutting deployment effort by <strong>70%</strong></li>
-                <li>Optimized API performance through <strong>Backend-for-Frontend (BFF)</strong> architecture, reducing network calls by <strong>70%</strong> and achieving <strong>sub-500ms</strong> response times</li>
-                <li>Established <strong>90% test coverage</strong> using interface-driven design and structured error handling with Kermit logging</li>
-                <li>Implemented platform-specific features using <strong>expect/actual patterns</strong> with Koin dependency injection for biometrics, secure storage, and real-time messaging</li>
+                <li>Owned end-to-end development of <strong>Shell Asia loyalty app</strong> features, spanning <strong>Kotlin</strong>-based Android development, <strong>KMP</strong> module architecture, REST API integration, testing, and production rollout across <strong>6+ international markets</strong>.</li>
+                <li>Spearheaded migration of <strong>500,000+ lines of code</strong> from legacy Android to <strong>Kotlin Multiplatform</strong>, achieving <strong>80% code reusability</strong> across Android and iOS platforms.</li>
+                <li>Architected <strong>6 cross-platform KMP modules</strong> (Authentication, Profile, Dashboard, Loyalty, Payments, OTP), reducing feature delivery time by <strong>~60%</strong>.</li>
+                <li>Engineered <strong>14+ Server-Driven UI components</strong> enabling real-time UI updates without app releases, cutting deployment effort by <strong>~70%</strong>.</li>
+                <li>Optimized API performance through <strong>Backend-for-Frontend (BFF)</strong> architecture, reducing network calls by <strong>~70%</strong> and achieving <strong>sub-500ms</strong> response times.</li>
+                <li>Designed end-to-end feature flow using <strong>ViewModel → Repository → BFF APIs</strong> with <strong>SDUI</strong> for dynamic UI delivery.</li>
             </ul>
             
-            <p class="project-name">Shell Asia App - Android Development</p>
+            <p class="project-name">Android Development –</p>
             <ul>
-                <li>Developed and maintained multi-region loyalty app using <strong>Kotlin, Jetpack Compose, and MVVM</strong>, achieving <strong>99% crash-free rate</strong> across <strong>6+ markets</strong></li>
-                <li>Transformed XML-based screens to <strong>Jetpack Compose</strong>, accelerating UI development speed by <strong>35%</strong> and eliminating legacy UI defects</li>
-                <li>Built B2C and B2B payment flows processing <strong>50,000+ monthly transactions</strong> with biometric authentication and AES-256 encrypted storage</li>
-                <li>Integrated <strong>Firebase Analytics, Crashlytics, and Performance Monitoring</strong>, driving <strong>15% increase</strong> in user engagement and <strong>50% faster</strong> issue resolution</li>
-                <li>Designed centralized error handling engine and deep linking system, reducing debugging time by <strong>30%</strong></li>
-                <li>Implemented <strong>Hilt</strong> dependency injection and <strong>Room</strong> database for offline-first architecture, improving reliability by <strong>40%</strong> in low-connectivity regions</li>
+                <li>Developed and maintained multi-region loyalty app using <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, and <strong>MVVM</strong>, achieving <strong>99% crash-free rate</strong> across 6+ markets.</li>
+                <li>Transformed XML-based screens to <strong>Jetpack Compose</strong>, accelerating UI development speed by <strong>~35%</strong> and eliminating legacy UI defects.</li>
+                <li>Built B2C and B2B payment flows processing <strong>50,000+ monthly transactions</strong> with biometric authentication and <strong>AES-256</strong> encrypted storage.</li>
+                <li>Integrated <strong>Firebase Analytics, Crashlytics, and Performance Monitoring</strong>, driving <strong>15% increase</strong> in user engagement and <strong>50% faster</strong> issue resolution.</li>
+                <li>Designed centralized error handling engine and <strong>deep linking system</strong>, reducing debugging time by <strong>~30%</strong>.</li>
+                <li>Implemented <strong>Hilt</strong> across <strong>multi-module architecture</strong> and built offline-first data layers using <strong>Room</strong> and encrypted SharedPreferences, improving reliability by <strong>~40%</strong> in low-connectivity regions.</li>
             </ul>
         </section>
         
         <section>
-            <h2>TECHNICAL SKILLS</h2>
-            <div class="skills-section">
-                <p><strong>Languages:</strong> Kotlin, Java, Swift, SQL</p>
-                <p><strong>Android Development:</strong> Jetpack Compose, XML, MVVM, Room, Retrofit, WorkManager, Coroutines, Hilt, Dagger, LiveData, ViewModel</p>
-                <p><strong>Cross-Platform:</strong> Kotlin Multiplatform (KMP), Ktor, SwiftUI, Combine, KMP-NativeCoroutines</p>
-                <p><strong>Architecture & Patterns:</strong> Clean Architecture, SOLID Principles, Modularization, Server-Driven UI (SDUI), Backend-for-Frontend (BFF), Dependency Injection, Repository Pattern</p>
-                <p><strong>Tools & Platforms:</strong> Android Studio, Xcode, Git, GitLab CI/CD, Firebase (Analytics, Crashlytics, Cloud Messaging, Performance Monitoring), Gradle</p>
-                <p><strong>Testing:</strong> JUnit, Espresso, MockK, Turbine, Kotest</p>
-            </div>
+            <h2>Technical Skills</h2>
+            <p class="skills-line"><strong>Languages:</strong> Kotlin, Java, Swift, SQL</p>
+            <p class="skills-line"><strong>Android:</strong> Jetpack Compose, XML, MVVM, Room, Retrofit, WorkManager, Coroutines, Hilt, Dagger, LiveData, ViewModel</p>
+            <p class="skills-line"><strong>Cross-Platform:</strong> Kotlin Multiplatform (KMP), Ktor, SwiftUI, Combine, KMP-NativeCoroutines</p>
+            <p class="skills-line"><strong>Architecture:</strong> Clean Architecture, System Design, SOLID, Modularization, Server-Driven UI (SDUI), BFF, Repository Pattern</p>
+            <p class="skills-line"><strong>Tools:</strong> Gradle, Android Studio, Xcode, Git, GitLab CI/CD, Firebase, Postman</p>
+            <p class="skills-line"><strong>Testing:</strong> JUnit, Espresso, MockK, Turbine, Kotest</p>
         </section>
 
         <section>
-            <h2>EDUCATION</h2>
-            <p class="edu-item"><strong>Bachelor of Technology (B.Tech)</strong> in Computer Science | 2019 - 2023</p>
+            <h2>Education</h2>
+            <p class="edu-item"><strong>B. Tech, Computer Science</strong> – 2019–2023</p>
         </section>
         
         <section>
-            <h2>CERTIFICATIONS & ACHIEVEMENTS</h2>
+            <h2>Certifications</h2>
             <ul>
-                <li><strong>Capillary AI Challenge Winner</strong> - Developed AI-powered Slack Bot (2025)</li>
-                <li><strong>Persistent Martian Internship Program</strong> - Certified (2023)</li>
-                <li>Solved <strong>300+ algorithmic problems</strong> on LeetCode, GeeksForGeeks, and CodeChef</li>
+                <li><strong>Persistent Martian Internship Program</strong> – Certified (2023)</li>
+                <li><strong>Capillary AI Challenge Winner</strong> – Developed AI-powered Slack Bot (2025)</li>
             </ul>
         </section>
     </div>
